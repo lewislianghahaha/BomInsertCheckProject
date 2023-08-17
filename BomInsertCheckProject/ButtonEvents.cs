@@ -27,11 +27,8 @@ namespace BomInsertCheckProject
                 var result = generate.InsertCheckProject(dhstr);
 
                 message = result == "Finish" ? $@"BOM编号:'{dhstr}'已成功添加检验信息! " : $@"BOM编号:'{dhstr}'添加检验信息出现异常,原因:'{result}'";
-                //当出现异常时才提示
-                if (result != "Finish")
-                {
-                    View.ShowMessage(message);
-                }
+
+                View.ShowMessage(message);
             }
         }
     }
