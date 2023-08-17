@@ -20,8 +20,8 @@ namespace BomInsertCheckProject
             //todo:获取BOM编码
             var dhstr = docScddIds1["Number"].ToString();
 
-            //当点击提交 时会执行
-            if (e.BarItemKey == "tbSplitSubmit" || e.BarItemKey== "tbSubmit")
+            //当点击“更新检验标准信息” 时会执行
+            if (e.BarItemKey == "tbUpCheckProject")
             {
                 //todo:执行相关插入操作
                 var result = generate.InsertCheckProject(dhstr);
