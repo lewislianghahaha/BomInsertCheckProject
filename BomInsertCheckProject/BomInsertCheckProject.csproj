@@ -30,19 +30,19 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Kingdee.BOS, Version=6.1.394.12, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Kingdee.BOS, Version=8.1.620.12, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLL\Kingdee.BOS.dll</HintPath>
     </Reference>
-    <Reference Include="Kingdee.BOS.Core, Version=6.1.394.12, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Kingdee.BOS.Core, Version=8.1.620.12, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLL\Kingdee.BOS.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Kingdee.BOS.DataEntity, Version=6.1.394.12, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Kingdee.BOS.DataEntity, Version=8.1.620.12, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLL\Kingdee.BOS.DataEntity.dll</HintPath>
     </Reference>
-    <Reference Include="Kingdee.BOS.ServiceHelper, Version=6.1.394.12, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Kingdee.BOS.ServiceHelper, Version=8.1.620.12, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>DLL\Kingdee.BOS.ServiceHelper.dll</HintPath>
     </Reference>
