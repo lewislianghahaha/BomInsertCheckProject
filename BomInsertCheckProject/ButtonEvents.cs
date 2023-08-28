@@ -9,8 +9,7 @@ namespace BomInsertCheckProject
         public override void BarItemClick(BarItemClickEventArgs e)
         {
             var generate = new Generate();
-            //输出信息
-            var message = string.Empty;
+
             //定义主键变量(用于收集所选中的行主键值)
             var flistid = string.Empty;
             //定义中间变量(对比重复使用)
@@ -50,7 +49,7 @@ namespace BomInsertCheckProject
 
                     var result = generate.InsertCheckProject(flistid);
 
-                    message = result == "Finish" ? $@"已成功添加检验信息,请进入指定单据内进行查阅" : $@"添加检验信息出现异常,原因:'{result}'";
+                    var message = result == "Finish" ? $@"已成功添加检验信息,请进入指定单据内进行查阅" : $@"添加检验信息出现异常,原因:'{result}'";
 
                     //输出
                     if (result == "Finish")
