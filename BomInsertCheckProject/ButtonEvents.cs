@@ -62,11 +62,10 @@ namespace BomInsertCheckProject
                     //    View.ShowMessage("多行:"+message);
                     //}
 
-
                     var result = generate.InsertCheckProject(flistid);
 
                     message = result == "Finish" ? $@"已成功添加检验信息,请进入指定单据内进行查阅" : $@"添加检验信息出现异常,原因:'{result}'";
-                    
+
                     //输出
                     if (result == "Finish")
                     {
@@ -77,23 +76,6 @@ namespace BomInsertCheckProject
                         View.ShowErrMessage(message);
                     }
                 }
-
-                ////定义获取表头信息对像
-                //var docScddIds1 = View.Model.DataObject;
-                ////获取表头中单据编号信息(注:这里的Number为单据编号中"绑定实体属性"项中获得)
-                ////todo:获取BOM编码
-                //var dhstr = docScddIds1["Number"].ToString();
-
-                ////当点击“更新检验标准信息” 时会执行
-                //if (e.BarItemKey == "tbUpCheckProject")
-                //{
-                //    //todo:执行相关插入操作
-                //    var result = generate.InsertCheckProject(dhstr);
-
-                //    message = result == "Finish" ? $@"BOM编号:'{dhstr}'已成功添加检验信息! " : $@"BOM编号:'{dhstr}'添加检验信息出现异常,原因:'{result}'";
-
-                //    View.ShowMessage(message); 
-                //}
             }
         }
     }

@@ -27,11 +27,11 @@ namespace BomInsertCheckProject
                 //todo:对获取的主键值进行以","号拆解,并循环获取FID值放到SQL语句中进行数据处理
                 else
                 {
-                    string[] reslut = fidlist.Split(',');
+                    string[] rdsplit = fidlist.Split(',');
 
-                    for (var i = 0; i < result.Length; i++)
+                    for (var i = 0; i < rdsplit.Length; i++)
                     {
-                        Generdt(sqllist.InsertRdToCheckProject(Convert.ToString(reslut[i])));
+                        Generdt(sqllist.InsertRdToCheckProject(Convert.ToString(rdsplit[i])));
                     }
                 }
             }
@@ -58,7 +58,7 @@ namespace BomInsertCheckProject
         }
 
         /// <summary>
-        /// 获取连接返回信息 正式:AIS20181204095717 测试:AIS20230811151520
+        /// 获取连接返回信息 
         /// </summary>
         /// <returns></returns>
         private SqlConnection GetCloudConn()
@@ -68,7 +68,7 @@ namespace BomInsertCheckProject
         }
 
         /// <summary>
-        /// 连接字符串
+        /// 连接字符串 正式:AIS20181204095717 测试:AIS20230811151520
         /// </summary>
         /// <returns></returns>
         private string GetConnectionString()
