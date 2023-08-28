@@ -57,14 +57,14 @@ namespace BomInsertCheckProject
 		                                        INSERT INTO dbo.Z_ytc_CheckProject( Column1 )
 		                                        VALUES  (1)
 
-		                                        SELECT @id=Id FROM dbo.Z_ytc_CheckProject
+		                                        SELECT @id = Id FROM dbo.Z_ytc_CheckProject
 
 		                                        DELETE FROM dbo.Z_ytc_CheckProject
 	                                        END
 
 	                                        --插入
 	                                        INSERT into ytc_CheckProject(FID,FEntryID,F_YTC_CHECKROWID,F_YTC_CHECKITEM,F_YTC_CHECKSTANDARD,F_YTC_toplimit,F_YTC_lowlimit)
-	                                        SELECT {fid},@ID,
+	                                        SELECT {fid},@id,
 	                                                    ''
 				                                        ,A.F_YTC_CHECKITEM,A.F_YTC_CHECKSTANDARD,A.F_YTC_toplimit,A.F_YTC_lowlimit
 	                                        FROM #TEMP0 A WHERE ID=@I
