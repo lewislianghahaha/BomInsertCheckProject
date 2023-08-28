@@ -45,29 +45,33 @@ namespace BomInsertCheckProject
                                     --根据#TEMP0进行循环,并获取Z_ytc_CheckProject主键
                                     SELECT @count=COUNT(*) FROM #TEMP0
 
-                                    WHILE @I<=@count
+                                    --检测若@count>0时才执行
+                                    IF(@count>0)
                                     BEGIN
-	                                    --获取Z_ytc_CheckProject主键->作为ytc_CheckProject.FEntryid值
-	                                    DECLARE
-		                                    @id INT;
-	                                    BEGIN
-		                                    INSERT INTO dbo.Z_ytc_CheckProject( Column1 )
-		                                    VALUES  (1)
+                                        WHILE @I<=@count
+                                        BEGIN
+	                                        --获取Z_ytc_CheckProject主键->作为ytc_CheckProject.FEntryid值
+	                                        DECLARE
+		                                        @id INT;
+	                                        BEGIN
+		                                        INSERT INTO dbo.Z_ytc_CheckProject( Column1 )
+		                                        VALUES  (1)
 
-		                                    SELECT @id=Id FROM dbo.Z_ytc_CheckProject
+		                                        SELECT @id=Id FROM dbo.Z_ytc_CheckProject
 
-		                                    DELETE FROM dbo.Z_ytc_CheckProject
-	                                    END
+		                                        DELETE FROM dbo.Z_ytc_CheckProject
+	                                        END
 
-	                                    --插入
-	                                    INSERT into ytc_CheckProject(FID,FEntryID ,F_YTC_CHECKROWID,F_YTC_CHECKITEM,F_YTC_CHECKSTANDARD,F_YTC_toplimit,F_YTC_lowlimit)
-	                                    SELECT @FID,@ID,
-	                                                ''
-				                                    ,A.F_YTC_CHECKITEM,A.F_YTC_CHECKSTANDARD,A.F_YTC_toplimit,A.F_YTC_lowlimit
-	                                    FROM #TEMP0 A WHERE ID=@I
+	                                        --插入
+	                                        INSERT into ytc_CheckProject(FID,FEntryID,F_YTC_CHECKROWID,F_YTC_CHECKITEM,F_YTC_CHECKSTANDARD,F_YTC_toplimit,F_YTC_lowlimit)
+	                                        SELECT {fid},@ID,
+	                                                    ''
+				                                        ,A.F_YTC_CHECKITEM,A.F_YTC_CHECKSTANDARD,A.F_YTC_toplimit,A.F_YTC_lowlimit
+	                                        FROM #TEMP0 A WHERE ID=@I
 
-	                                    SET @I=@I+1
-                                    END
+	                                        SET @I=@I+1
+                                        END
+                                  END
 				            END
                         ";
 

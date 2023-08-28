@@ -48,20 +48,6 @@ namespace BomInsertCheckProject
                         }
                     }
 
-                    //if (!flistid.Contains(","))
-                    //{
-                    //    View.ShowMessage("单行:"+flistid);
-                    //}
-                    //else
-                    //{
-                    //    string[] reslut = flistid.Split(',');
-                    //    for (var i = 0; i < reslut.Length; i++)
-                    //    {
-                    //        message += "A" + Convert.ToString(reslut[i]);
-                    //    }
-                    //    View.ShowMessage("多行:"+message);
-                    //}
-
                     var result = generate.InsertCheckProject(flistid);
 
                     message = result == "Finish" ? $@"已成功添加检验信息,请进入指定单据内进行查阅" : $@"添加检验信息出现异常,原因:'{result}'";

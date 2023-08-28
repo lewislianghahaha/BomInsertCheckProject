@@ -75,7 +75,7 @@ namespace BomInsertCheckProject
         {
             var strcon = string.Empty;
 
-            strcon = @"Data Source='192.168.1.228';Initial Catalog='AIS20230811151520';Persist Security Info=True;User ID='sa'; Password='kingdee';
+            strcon = @"Data Source='192.168.1.228';Initial Catalog='AIS20181204095717';Persist Security Info=True;User ID='sa'; Password='kingdee';
                     Pooling=true;Max Pool Size=40000;Min Pool Size=0";
 
             return strcon;
